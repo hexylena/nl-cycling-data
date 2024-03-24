@@ -1,4 +1,6 @@
 import json
+import copy
+import tqdm
 import networkx as nx
 import geopy.distance
 import pyproj
@@ -11,9 +13,11 @@ r_transformer = pyproj.Transformer.from_crs(rd, wg84)
 
 # convert overpass turbo into real geojson for us.
 
-with open('holland.geojson', 'r') as handle:
+print('Loading holland.geojson.gz')
+with gzip.open('holland.geojson.gz', 'r') as handle:
     data = json.load(handle)
 
+print('Loading holland.nodes.geojson')
 with open('holland.nodes.geojson', 'r') as handle:
     nodes = json.load(handle)
 
@@ -30,15 +34,17 @@ rd_boxes = []
 G = nx.Graph()
 
 # First time through the data collect our nodes.
-for node in nodes['elements']:
-        k = f"{node['lon']},{node['lat']}"
-        refs[k] = {
-            'num': node['tags']['rcn_ref'],
-            'id': node['id'],
-            'refs': set(),
-            'j': [],
-        }
-        G.add_node(node['id'], num=node['tags']['rcn_ref'], lon=node['lon'], lat=node['lat'])
+for node in tqdm.tqdm(nodes['elements']):
+    if 'lon' not in node:
+        continue
+    k = f"{node['lon']},{node['lat']}"
+    refs[k] = {
+        'num': node['tags']['rcn_ref'],
+        'id': node['id'],
+        'refs': set(),
+        'j': [],
+    }
+    G.add_node(node['id'], num=node['tags']['rcn_ref'], lon=node['lon'], lat=node['lat'])
 
 def chunk(x, y, size=CHUNK_DIST):
     # Round both x and y to chunks of 50
@@ -46,7 +52,10 @@ def chunk(x, y, size=CHUNK_DIST):
     return (int(x/size)*size, int(y/size)*size)
 
 # Second time through deep search through the ways to find any overlaps.
-for e in data['elements']:
+for e in tqdm.tqdm(data['elements']):
+    if not ('tags' in e and 'type' in e['tags']):
+        continue
+
     if e['tags']['type'] == 'route':
         # Start of a node
         matching_nodes = []
@@ -62,11 +71,12 @@ for e in data['elements']:
                 if k in refs:
                     matching_nodes.append(k)
 
-                    q = set(e['tags']['ref'].split('-'))
-                    q = q - {refs[k]['id']}
-                    if len(q) == 0:
-                        continue
-                    refs[k]['refs'] |= q
+                    if 'ref' in e['tags']:
+                        q = set(e['tags']['ref'].split('-'))
+                        q = q - {refs[k]['id']}
+                        if len(q) == 0:
+                            continue
+                        refs[k]['refs'] |= q
 
         # We have our set of all nodes, chunked into 50m chunks.
         sall = set(all_nodes)
@@ -108,13 +118,17 @@ for e in data['elements']:
         elif len(differently_numbered_nodes) == 2:
             if e['id'] == "1163378":
                 print(distance)
+            qzz = copy.copy(e['tags'])
+            if 'distance' in qzz:
+                del qzz['distance']
+
             G.add_edge(
                 refs[matching_nodes[0]]['id'], 
                 refs[matching_nodes[1]]['id'],
                 id=e['id'],
                 distance=distance,
                 weight=100 / distance,
-                **e['tags']
+                **qzz
             )
             # print([refs[m] for m in matching_nodes])
         else:
@@ -125,29 +139,32 @@ for e in data['elements']:
 # pprint.pprint(refs)
 
 # Remove isolates
-G.remove_nodes_from(list(nx.isolates(G)))
+# G.remove_nodes_from(list(nx.isolates(G)))
+#
+# pos = nx.spring_layout(G, seed=7)  # positions for all nodes - seed for reproducibility
+# import matplotlib.pyplot as plt
+#
+# # nodes
+# nx.draw_networkx_nodes(G, pos, node_size=50)
+#
+# # edges
+# nx.draw_networkx_edges(G, pos, width=2)
+#
+# # node labels
+# nx.draw_networkx_labels(G, pos, font_size=5, font_family="sans-serif", labels={k: v['num'] for k, v in G.nodes(data=True)})
+# # edge weight labels
+# edge_labels = nx.get_edge_attributes(G, "distance")
+# nx.draw_networkx_edge_labels(G, pos, edge_labels, font_size=5, font_family="sans-serif")
+#
+# plt.axis("off")
+# plt.tight_layout()
+# plt.savefig("graph.png", dpi=300)
 
-pos = nx.spring_layout(G, seed=7)  # positions for all nodes - seed for reproducibility
-import matplotlib.pyplot as plt
 
-# nodes
-nx.draw_networkx_nodes(G, pos, node_size=50)
-
-# edges
-nx.draw_networkx_edges(G, pos, width=2)
-
-# node labels
-nx.draw_networkx_labels(G, pos, font_size=5, font_family="sans-serif", labels={k: v['num'] for k, v in G.nodes(data=True)})
-# edge weight labels
-edge_labels = nx.get_edge_attributes(G, "distance")
-nx.draw_networkx_edge_labels(G, pos, edge_labels, font_size=5, font_family="sans-serif")
-
-plt.axis("off")
-plt.tight_layout()
-plt.savefig("graph.png", dpi=300)
-
+print("Saving graph: holland.gexf")
 nx.write_gexf(G, 'holland.gexf')
 
+print("Saving rd_boxes.geojson")
 with open('rd_boxes.geojson', 'w') as handle:
     handle.write("const rd_boxes = ")
-    json.dump(rd_boxes, handle, indent=2)
+    json.dump(rd_boxes, handle)

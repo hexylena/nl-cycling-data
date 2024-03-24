@@ -4,7 +4,7 @@ const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-const rdLayer = L.geoJSON(rd_boxes).addTo(map);
+// const rdLayer = L.geoJSON(rd_boxes).addTo(map);
 
 function onEachFeature(feature, layer) {
 	let popupContent = `<p>I started out as a GeoJSON ${feature.geometry.type}, but now I'm a Leaflet vector!</p>`;
@@ -16,9 +16,21 @@ function onEachFeature(feature, layer) {
 	layer.bindPopup(popupContent);
 }
 
-const coorsLayer = L.geoJSON(gj, {
+const nodesLayer = L.geoJSON(gn, {
 	pointToLayer(feature, latlng) {
-		return L.circleMarker(latlng, {'color': 'blue', radius: 5});
+		return new L.Marker(latlng, 
+			{
+				icon: new L.DivIcon({
+					className: 'my-div-icon',
+					html: `<div class="w">${feature.properties.rcn_ref}</div>`
+				})
+			}
+
+		);
 	},
+	onEachFeature
+}).addTo(map);
+
+const waysLayaer = L.geoJSON(gw, {
 	onEachFeature
 }).addTo(map);

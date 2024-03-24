@@ -1,0 +1,656 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.1 084b4234",
+  "osm3s": {
+    "timestamp_osm_base": "2024-03-24T14:12:46Z",
+    "timestamp_areas_base": "2024-03-24T11:01:00Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 27594352,
+  "lat": 52.0941382,
+  "lon": 4.3405463,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "32",
+    "survey:date": "2021-04"
+  }
+},
+{
+  "type": "node",
+  "id": 44977338,
+  "lat": 52.0403075,
+  "lon": 4.2258843,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "4"
+  }
+},
+{
+  "type": "node",
+  "id": 45048032,
+  "lat": 52.0554781,
+  "lon": 4.2168461,
+  "tags": {
+    "network:type": "node_network",
+    "rcn_ref": "20"
+  }
+},
+{
+  "type": "node",
+  "id": 45069528,
+  "lat": 52.0602954,
+  "lon": 4.4181909,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "15",
+    "survey:date": "2021-03"
+  }
+},
+{
+  "type": "node",
+  "id": 45123108,
+  "lat": 52.0727566,
+  "lon": 4.3776390,
+  "tags": {
+    "expected_rcn_route_relations": "4",
+    "network:type": "node_network",
+    "rcn_ref": "75",
+    "survey:date": "2021-04"
+  }
+},
+{
+  "type": "node",
+  "id": 45123767,
+  "lat": 52.0728347,
+  "lon": 4.3777346,
+  "tags": {
+    "expected_rcn_route_relations": "4",
+    "network:type": "node_network",
+    "rcn_ref": "75",
+    "survey:date": "2021-04"
+  }
+},
+{
+  "type": "node",
+  "id": 45143554,
+  "lat": 52.0774985,
+  "lon": 4.3150341,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "28",
+    "survey:date": "2021-04"
+  }
+},
+{
+  "type": "node",
+  "id": 45143957,
+  "lat": 52.0776814,
+  "lon": 4.3150456,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "28",
+    "survey:date": "2021-04"
+  }
+},
+{
+  "type": "node",
+  "id": 45150008,
+  "lat": 52.0787925,
+  "lon": 4.2867231,
+  "tags": {
+    "network:type": "node_network",
+    "rcn_ref": "26"
+  }
+},
+{
+  "type": "node",
+  "id": 45151031,
+  "lat": 52.0789897,
+  "lon": 4.3114091,
+  "tags": {
+    "expected_rcn_route_relations": "4",
+    "network:type": "node_network",
+    "rcn_ref": "31",
+    "survey:date": "2021-04"
+  }
+},
+{
+  "type": "node",
+  "id": 45162118,
+  "lat": 52.0815935,
+  "lon": 4.2414904,
+  "tags": {
+    "network:type": "node_network",
+    "rcn_ref": "23"
+  }
+},
+{
+  "type": "node",
+  "id": 45167013,
+  "lat": 52.0828610,
+  "lon": 4.3132463,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "29",
+    "survey:date": "2021-04"
+  }
+},
+{
+  "type": "node",
+  "id": 45168112,
+  "lat": 52.0832193,
+  "lon": 4.3134978,
+  "tags": {
+    "expected_rcn_route_relations": "4",
+    "network:type": "node_network",
+    "rcn_ref": "29",
+    "survey:date": "2021-04"
+  }
+},
+{
+  "type": "node",
+  "id": 45232638,
+  "lat": 52.0976271,
+  "lon": 4.2857149,
+  "tags": {
+    "network:type": "node_network",
+    "rcn_ref": "37"
+  }
+},
+{
+  "type": "node",
+  "id": 45243461,
+  "lat": 52.1007042,
+  "lon": 4.3495732,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "33",
+    "survey:date": "2021-04"
+  }
+},
+{
+  "type": "node",
+  "id": 45288021,
+  "lat": 52.1107815,
+  "lon": 4.3041192,
+  "tags": {
+    "network:type": "node_network",
+    "rcn_ref": "36",
+    "rwn_ref": "43"
+  }
+},
+{
+  "type": "node",
+  "id": 333273261,
+  "lat": 52.0644490,
+  "lon": 4.2525617,
+  "tags": {
+    "network:type": "node_network",
+    "rcn_ref": "22"
+  }
+},
+{
+  "type": "node",
+  "id": 333273408,
+  "lat": 52.0648036,
+  "lon": 4.2528217,
+  "tags": {
+    "network:type": "node_network",
+    "rcn_ref": "22"
+  }
+},
+{
+  "type": "node",
+  "id": 361214563,
+  "lat": 52.1175481,
+  "lon": 4.3055012,
+  "tags": {
+    "network:type": "node_network",
+    "note": "Scheveningen",
+    "rcn_ref": "39"
+  }
+},
+{
+  "type": "node",
+  "id": 486901473,
+  "lat": 52.0680498,
+  "lon": 4.4073352,
+  "tags": {
+    "expected_rcn_route_relations": "4",
+    "network:type": "node_network",
+    "rcn_ref": "23",
+    "survey:date": "2021-03"
+  }
+},
+{
+  "type": "node",
+  "id": 568098164,
+  "lat": 52.0775612,
+  "lon": 4.3152425,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "28",
+    "survey:date": "2021-04"
+  }
+},
+{
+  "type": "node",
+  "id": 632733067,
+  "lat": 52.0776068,
+  "lon": 4.3148520,
+  "tags": {
+    "expected_rcn_route_relations": "2",
+    "network:type": "node_network",
+    "rcn_ref": "28",
+    "survey:date": "2021-04"
+  }
+},
+{
+  "type": "node",
+  "id": 1322663314,
+  "lat": 52.0220641,
+  "lon": 4.3041156,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "operator:rcn": "Regio Haaglanden",
+    "rcn_ref": "47",
+    "survey:date": "2021-04"
+  }
+},
+{
+  "type": "node",
+  "id": 1370329539,
+  "lat": 52.0483449,
+  "lon": 4.2842856,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "5",
+    "survey:date": "2021-03"
+  }
+},
+{
+  "type": "node",
+  "id": 1370329552,
+  "lat": 52.0486407,
+  "lon": 4.2848328,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "5",
+    "survey:date": "2021-03"
+  }
+},
+{
+  "type": "node",
+  "id": 1370329555,
+  "lat": 52.0486252,
+  "lon": 4.2838423,
+  "tags": {
+    "expected_rcn_route_relations": "2",
+    "network:type": "node_network",
+    "rcn_ref": "5",
+    "survey:date": "2021-03"
+  }
+},
+{
+  "type": "node",
+  "id": 1370329565,
+  "lat": 52.0489439,
+  "lon": 4.2843821,
+  "tags": {
+    "expected_rcn_route_relations": "2",
+    "network:type": "node_network",
+    "rcn_ref": "5",
+    "survey:date": "2021-03"
+  }
+},
+{
+  "type": "node",
+  "id": 1375266259,
+  "lat": 52.0330067,
+  "lon": 4.2437321,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "7",
+    "survey:date": "2021-03"
+  }
+},
+{
+  "type": "node",
+  "id": 1376230172,
+  "lat": 52.0421784,
+  "lon": 4.2326080,
+  "tags": {
+    "expected_rcn_route_relations": "4",
+    "network:type": "node_network",
+    "rcn_ref": "2"
+  }
+},
+{
+  "type": "node",
+  "id": 1376230381,
+  "lat": 52.0556241,
+  "lon": 4.2166675,
+  "tags": {
+    "network:type": "node_network",
+    "rcn_ref": "20"
+  }
+},
+{
+  "type": "node",
+  "id": 1377049969,
+  "lat": 52.0592772,
+  "lon": 4.2398273,
+  "tags": {
+    "network:type": "node_network",
+    "rcn_ref": "21"
+  }
+},
+{
+  "type": "node",
+  "id": 1379329814,
+  "lat": 52.0575143,
+  "lon": 4.2904690,
+  "tags": {
+    "network:type": "node_network",
+    "operator": "Haaglanden",
+    "rcn_ref": "27"
+  }
+},
+{
+  "type": "node",
+  "id": 1387908185,
+  "lat": 52.0723934,
+  "lon": 4.2752660,
+  "tags": {
+    "expected_rcn_route_relations": "2",
+    "highway": "crossing",
+    "network:type": "node_network",
+    "rcn_ref": "25"
+  }
+},
+{
+  "type": "node",
+  "id": 1387908186,
+  "lat": 52.0726114,
+  "lon": 4.2756020,
+  "tags": {
+    "expected_rcn_route_relations": "2",
+    "highway": "crossing",
+    "network:type": "node_network",
+    "rcn_ref": "25"
+  }
+},
+{
+  "type": "node",
+  "id": 1387908303,
+  "lat": 52.0919446,
+  "lon": 4.2656762,
+  "tags": {
+    "expected_rcn_route_relations": "4",
+    "network:type": "node_network",
+    "rcn_ref": "24"
+  }
+},
+{
+  "type": "node",
+  "id": 1430014424,
+  "lat": 52.0486045,
+  "lon": 4.3611945,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "65",
+    "survey:date": "2023-02"
+  }
+},
+{
+  "type": "node",
+  "id": 1431427422,
+  "lat": 52.0574941,
+  "lon": 4.3982118,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "25",
+    "survey:date": "2021-04",
+    "traffic_calming": "table"
+  }
+},
+{
+  "type": "node",
+  "id": 1431454084,
+  "lat": 52.0354067,
+  "lon": 4.3804125,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "expected_rwn_route_relations": "3",
+    "network:type": "node_network",
+    "operator:rwn": "Hof van Delfland",
+    "rcn_ref": "20",
+    "rwn_ref": "11",
+    "survey:date": "2021-03"
+  }
+},
+{
+  "type": "node",
+  "id": 1432078726,
+  "lat": 52.0324798,
+  "lon": 4.3737016,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "operator:rcn": "Regio Haaglanden",
+    "rcn_ref": "64",
+    "survey:date": "2021-03"
+  }
+},
+{
+  "type": "node",
+  "id": 1447253571,
+  "lat": 52.0565403,
+  "lon": 4.3483249,
+  "tags": {
+    "expected_rwn_route_relations": "3",
+    "network:type": "node_network",
+    "operator:rwn": "Hof van Delfland",
+    "rcn_ref": "71",
+    "rwn_ref": "67",
+    "survey:date": "2023-02"
+  }
+},
+{
+  "type": "node",
+  "id": 1545004532,
+  "lat": 52.1103111,
+  "lon": 4.3040851,
+  "tags": {
+    "network:type": "node_network",
+    "rcn_ref": "36"
+  }
+},
+{
+  "type": "node",
+  "id": 1630593206,
+  "lat": 52.0722713,
+  "lon": 4.2755842,
+  "tags": {
+    "expected_rcn_route_relations": "2",
+    "network:type": "node_network",
+    "rcn_ref": "25"
+  }
+},
+{
+  "type": "node",
+  "id": 1630593211,
+  "lat": 52.0723127,
+  "lon": 4.2752728,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "25"
+  }
+},
+{
+  "type": "node",
+  "id": 1667689186,
+  "lat": 52.0847617,
+  "lon": 4.3501405,
+  "tags": {
+    "network:type": "node_network",
+    "rcn_ref": "56",
+    "rwn_ref": "22"
+  }
+},
+{
+  "type": "node",
+  "id": 1701657172,
+  "lat": 52.0612275,
+  "lon": 4.2080127,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "3"
+  }
+},
+{
+  "type": "node",
+  "id": 3651033264,
+  "lat": 52.0725430,
+  "lon": 4.2756514,
+  "tags": {
+    "expected_rcn_route_relations": "2",
+    "network:type": "node_network",
+    "rcn_ref": "25"
+  }
+},
+{
+  "type": "node",
+  "id": 4823170646,
+  "lat": 52.0820156,
+  "lon": 4.3216958,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "30",
+    "survey:date": "2021-04"
+  }
+},
+{
+  "type": "node",
+  "id": 5782151108,
+  "lat": 52.1085333,
+  "lon": 4.3231464,
+  "tags": {
+    "network:type": "node_network",
+    "rcn_ref": "35"
+  }
+},
+{
+  "type": "node",
+  "id": 5782151135,
+  "lat": 52.1084230,
+  "lon": 4.3229482,
+  "tags": {
+    "network:type": "node_network",
+    "rcn_ref": "35"
+  }
+},
+{
+  "type": "node",
+  "id": 5782151141,
+  "lat": 52.1085621,
+  "lon": 4.3229668,
+  "tags": {
+    "network:type": "node_network",
+    "rcn_ref": "35"
+  }
+},
+{
+  "type": "node",
+  "id": 6128456230,
+  "lat": 52.0790840,
+  "lon": 4.3115431,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "31",
+    "survey:date": "2021-04"
+  }
+},
+{
+  "type": "node",
+  "id": 6580433374,
+  "lat": 52.0571694,
+  "lon": 4.3494345,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "38",
+    "survey:date": "2023-02"
+  }
+},
+{
+  "type": "node",
+  "id": 7511532148,
+  "lat": 52.0486066,
+  "lon": 4.3612665,
+  "tags": {
+    "expected_rcn_route_relations": "4",
+    "network:type": "node_network",
+    "rcn_ref": "65",
+    "survey:date": "2023-02"
+  }
+},
+{
+  "type": "node",
+  "id": 7511532154,
+  "lat": 52.0486607,
+  "lon": 4.3611928,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "65",
+    "survey:date": "2023-02"
+  }
+},
+{
+  "type": "node",
+  "id": 8381869850,
+  "lat": 52.0846346,
+  "lon": 4.3502770,
+  "tags": {
+    "network:type": "node_network",
+    "rcn_ref": "56"
+  }
+},
+{
+  "type": "node",
+  "id": 8481094386,
+  "lat": 52.0821969,
+  "lon": 4.3219331,
+  "tags": {
+    "expected_rcn_route_relations": "3",
+    "network:type": "node_network",
+    "rcn_ref": "30",
+    "survey:date": "2021-04"
+  }
+}
+
+  ]
+}
