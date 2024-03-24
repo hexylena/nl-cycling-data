@@ -1,4 +1,4 @@
-	const map = L.map('map').setView([52, 4], 8);
+	const map = L.map('map').setView([52.05, 4.3], 12);
 	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		maxZoom: 19,
 		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -16,7 +16,7 @@ function onEachFeature(feature, layer) {
 
 const coorsLayer = L.geoJSON(gj, {
 	pointToLayer(feature, latlng) {
-		return L.marker(latlng, {'color': 'red'});
+		return L.circleMarker(latlng, {'color': 'blue', radius: 5});
 	},
 	onEachFeature
 }).addTo(map);
