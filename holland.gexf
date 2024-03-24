@@ -1,0 +1,682 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-03-24">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <attributes mode="static" class="edge">
+      <attribute id="3" title="distance" type="long" />
+      <attribute id="4" title="network" type="string" />
+      <attribute id="5" title="network:type" type="string" />
+      <attribute id="6" title="ref" type="string" />
+      <attribute id="7" title="route" type="string" />
+      <attribute id="8" title="survey:date" type="string" />
+      <attribute id="9" title="comment" type="string" />
+    </attributes>
+    <attributes mode="static" class="node">
+      <attribute id="0" title="num" type="string" />
+      <attribute id="1" title="lon" type="double" />
+      <attribute id="2" title="lat" type="double" />
+    </attributes>
+    <nodes>
+      <node id="27594352" label="27594352">
+        <attvalues>
+          <attvalue for="0" value="32" />
+          <attvalue for="1" value="4.3405463" />
+          <attvalue for="2" value="52.0941382" />
+        </attvalues>
+      </node>
+      <node id="44977338" label="44977338">
+        <attvalues>
+          <attvalue for="0" value="4" />
+          <attvalue for="1" value="4.2258843" />
+          <attvalue for="2" value="52.0403075" />
+        </attvalues>
+      </node>
+      <node id="45048032" label="45048032">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="4.2168461" />
+          <attvalue for="2" value="52.0554781" />
+        </attvalues>
+      </node>
+      <node id="45069528" label="45069528">
+        <attvalues>
+          <attvalue for="0" value="15" />
+          <attvalue for="1" value="4.4181909" />
+          <attvalue for="2" value="52.0602954" />
+        </attvalues>
+      </node>
+      <node id="45123767" label="45123767">
+        <attvalues>
+          <attvalue for="0" value="75" />
+          <attvalue for="1" value="4.3777346" />
+          <attvalue for="2" value="52.0728347" />
+        </attvalues>
+      </node>
+      <node id="45143554" label="45143554">
+        <attvalues>
+          <attvalue for="0" value="28" />
+          <attvalue for="1" value="4.3150341" />
+          <attvalue for="2" value="52.0774985" />
+        </attvalues>
+      </node>
+      <node id="45143957" label="45143957">
+        <attvalues>
+          <attvalue for="0" value="28" />
+          <attvalue for="1" value="4.3150456" />
+          <attvalue for="2" value="52.0776814" />
+        </attvalues>
+      </node>
+      <node id="45150008" label="45150008">
+        <attvalues>
+          <attvalue for="0" value="26" />
+          <attvalue for="1" value="4.2867231" />
+          <attvalue for="2" value="52.0787925" />
+        </attvalues>
+      </node>
+      <node id="45151031" label="45151031">
+        <attvalues>
+          <attvalue for="0" value="31" />
+          <attvalue for="1" value="4.3114091" />
+          <attvalue for="2" value="52.0789897" />
+        </attvalues>
+      </node>
+      <node id="45162118" label="45162118">
+        <attvalues>
+          <attvalue for="0" value="23" />
+          <attvalue for="1" value="4.2414904" />
+          <attvalue for="2" value="52.0815935" />
+        </attvalues>
+      </node>
+      <node id="45167013" label="45167013">
+        <attvalues>
+          <attvalue for="0" value="29" />
+          <attvalue for="1" value="4.3132463" />
+          <attvalue for="2" value="52.082861" />
+        </attvalues>
+      </node>
+      <node id="45168112" label="45168112">
+        <attvalues>
+          <attvalue for="0" value="29" />
+          <attvalue for="1" value="4.3134978" />
+          <attvalue for="2" value="52.0832193" />
+        </attvalues>
+      </node>
+      <node id="45232638" label="45232638">
+        <attvalues>
+          <attvalue for="0" value="37" />
+          <attvalue for="1" value="4.2857149" />
+          <attvalue for="2" value="52.0976271" />
+        </attvalues>
+      </node>
+      <node id="45243461" label="45243461">
+        <attvalues>
+          <attvalue for="0" value="33" />
+          <attvalue for="1" value="4.3495732" />
+          <attvalue for="2" value="52.1007042" />
+        </attvalues>
+      </node>
+      <node id="45288021" label="45288021">
+        <attvalues>
+          <attvalue for="0" value="36" />
+          <attvalue for="1" value="4.3041192" />
+          <attvalue for="2" value="52.1107815" />
+        </attvalues>
+      </node>
+      <node id="333273408" label="333273408">
+        <attvalues>
+          <attvalue for="0" value="22" />
+          <attvalue for="1" value="4.2528217" />
+          <attvalue for="2" value="52.0648036" />
+        </attvalues>
+      </node>
+      <node id="361214563" label="361214563">
+        <attvalues>
+          <attvalue for="0" value="39" />
+          <attvalue for="1" value="4.3055012" />
+          <attvalue for="2" value="52.1175481" />
+        </attvalues>
+      </node>
+      <node id="486901473" label="486901473">
+        <attvalues>
+          <attvalue for="0" value="23" />
+          <attvalue for="1" value="4.4073352" />
+          <attvalue for="2" value="52.0680498" />
+        </attvalues>
+      </node>
+      <node id="568098164" label="568098164">
+        <attvalues>
+          <attvalue for="0" value="28" />
+          <attvalue for="1" value="4.3152425" />
+          <attvalue for="2" value="52.0775612" />
+        </attvalues>
+      </node>
+      <node id="1370329539" label="1370329539">
+        <attvalues>
+          <attvalue for="0" value="5" />
+          <attvalue for="1" value="4.2842856" />
+          <attvalue for="2" value="52.0483449" />
+        </attvalues>
+      </node>
+      <node id="1370329565" label="1370329565">
+        <attvalues>
+          <attvalue for="0" value="5" />
+          <attvalue for="1" value="4.2843821" />
+          <attvalue for="2" value="52.0489439" />
+        </attvalues>
+      </node>
+      <node id="1375266259" label="1375266259">
+        <attvalues>
+          <attvalue for="0" value="7" />
+          <attvalue for="1" value="4.2437321" />
+          <attvalue for="2" value="52.0330067" />
+        </attvalues>
+      </node>
+      <node id="1376230172" label="1376230172">
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="4.232608" />
+          <attvalue for="2" value="52.0421784" />
+        </attvalues>
+      </node>
+      <node id="1376230381" label="1376230381">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="4.2166675" />
+          <attvalue for="2" value="52.0556241" />
+        </attvalues>
+      </node>
+      <node id="1377049969" label="1377049969">
+        <attvalues>
+          <attvalue for="0" value="21" />
+          <attvalue for="1" value="4.2398273" />
+          <attvalue for="2" value="52.0592772" />
+        </attvalues>
+      </node>
+      <node id="1379329814" label="1379329814">
+        <attvalues>
+          <attvalue for="0" value="27" />
+          <attvalue for="1" value="4.290469" />
+          <attvalue for="2" value="52.0575143" />
+        </attvalues>
+      </node>
+      <node id="1387908185" label="1387908185">
+        <attvalues>
+          <attvalue for="0" value="25" />
+          <attvalue for="1" value="4.275266" />
+          <attvalue for="2" value="52.0723934" />
+        </attvalues>
+      </node>
+      <node id="1387908186" label="1387908186">
+        <attvalues>
+          <attvalue for="0" value="25" />
+          <attvalue for="1" value="4.275602" />
+          <attvalue for="2" value="52.0726114" />
+        </attvalues>
+      </node>
+      <node id="1387908303" label="1387908303">
+        <attvalues>
+          <attvalue for="0" value="24" />
+          <attvalue for="1" value="4.2656762" />
+          <attvalue for="2" value="52.0919446" />
+        </attvalues>
+      </node>
+      <node id="1431427422" label="1431427422">
+        <attvalues>
+          <attvalue for="0" value="25" />
+          <attvalue for="1" value="4.3982118" />
+          <attvalue for="2" value="52.0574941" />
+        </attvalues>
+      </node>
+      <node id="1431454084" label="1431454084">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="4.3804125" />
+          <attvalue for="2" value="52.0354067" />
+        </attvalues>
+      </node>
+      <node id="1432078726" label="1432078726">
+        <attvalues>
+          <attvalue for="0" value="64" />
+          <attvalue for="1" value="4.3737016" />
+          <attvalue for="2" value="52.0324798" />
+        </attvalues>
+      </node>
+      <node id="1447253571" label="1447253571">
+        <attvalues>
+          <attvalue for="0" value="71" />
+          <attvalue for="1" value="4.3483249" />
+          <attvalue for="2" value="52.0565403" />
+        </attvalues>
+      </node>
+      <node id="1545004532" label="1545004532">
+        <attvalues>
+          <attvalue for="0" value="36" />
+          <attvalue for="1" value="4.3040851" />
+          <attvalue for="2" value="52.1103111" />
+        </attvalues>
+      </node>
+      <node id="1630593206" label="1630593206">
+        <attvalues>
+          <attvalue for="0" value="25" />
+          <attvalue for="1" value="4.2755842" />
+          <attvalue for="2" value="52.0722713" />
+        </attvalues>
+      </node>
+      <node id="1701657172" label="1701657172">
+        <attvalues>
+          <attvalue for="0" value="3" />
+          <attvalue for="1" value="4.2080127" />
+          <attvalue for="2" value="52.0612275" />
+        </attvalues>
+      </node>
+      <node id="4823170646" label="4823170646">
+        <attvalues>
+          <attvalue for="0" value="30" />
+          <attvalue for="1" value="4.3216958" />
+          <attvalue for="2" value="52.0820156" />
+        </attvalues>
+      </node>
+      <node id="5782151141" label="5782151141">
+        <attvalues>
+          <attvalue for="0" value="35" />
+          <attvalue for="1" value="4.3229668" />
+          <attvalue for="2" value="52.1085621" />
+        </attvalues>
+      </node>
+      <node id="6128456230" label="6128456230">
+        <attvalues>
+          <attvalue for="0" value="31" />
+          <attvalue for="1" value="4.3115431" />
+          <attvalue for="2" value="52.079084" />
+        </attvalues>
+      </node>
+      <node id="6580433374" label="6580433374">
+        <attvalues>
+          <attvalue for="0" value="38" />
+          <attvalue for="1" value="4.3494345" />
+          <attvalue for="2" value="52.0571694" />
+        </attvalues>
+      </node>
+      <node id="7511532148" label="7511532148">
+        <attvalues>
+          <attvalue for="0" value="65" />
+          <attvalue for="1" value="4.3612665" />
+          <attvalue for="2" value="52.0486066" />
+        </attvalues>
+      </node>
+      <node id="8381869850" label="8381869850">
+        <attvalues>
+          <attvalue for="0" value="56" />
+          <attvalue for="1" value="4.350277" />
+          <attvalue for="2" value="52.0846346" />
+        </attvalues>
+      </node>
+      <node id="8481094386" label="8481094386">
+        <attvalues>
+          <attvalue for="0" value="30" />
+          <attvalue for="1" value="4.3219331" />
+          <attvalue for="2" value="52.0821969" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="27594352" target="45243461" id="1059273" weight="0.078125" type="route">
+        <attvalues>
+          <attvalue for="3" value="1280" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="32-33" />
+          <attvalue for="7" value="bicycle" />
+          <attvalue for="8" value="2021-04" />
+        </attvalues>
+      </edge>
+      <edge source="27594352" target="8381869850" id="1059277" weight="0.0625" type="route">
+        <attvalues>
+          <attvalue for="3" value="1600" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="32-56" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="27594352" target="8481094386" id="1126561" weight="0.04032258064516129" type="route">
+        <attvalues>
+          <attvalue for="3" value="2480" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="30-32" />
+          <attvalue for="7" value="bicycle" />
+          <attvalue for="8" value="2021-04" />
+        </attvalues>
+      </edge>
+      <edge source="44977338" target="1376230172" id="1689463" weight="0.15625" type="route">
+        <attvalues>
+          <attvalue for="3" value="640" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="2-4" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="45048032" target="1376230381" id="1060661" weight="0.04310344827586207" type="route">
+        <attvalues>
+          <attvalue for="3" value="2320" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="2-20" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="45069528" target="486901473" id="11050580" weight="0.09615384615384616" type="route">
+        <attvalues>
+          <attvalue for="3" value="1040" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="15-23" />
+          <attvalue for="7" value="bicycle" />
+          <attvalue for="8" value="2021-03" />
+        </attvalues>
+      </edge>
+      <edge source="45123767" target="1431427422" id="6856230" weight="0.056818181818181816" type="route">
+        <attvalues>
+          <attvalue for="3" value="1760" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="25-75" />
+          <attvalue for="7" value="bicycle" />
+          <attvalue for="8" value="2021-04" />
+        </attvalues>
+      </edge>
+      <edge source="45143554" target="1379329814" id="1137044" weight="0.023148148148148147" type="route">
+        <attvalues>
+          <attvalue for="3" value="4320" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="27-28" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="45143957" target="568098164" id="1126542" weight="0.125" type="route">
+        <attvalues>
+          <attvalue for="3" value="800" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="28-30" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="45143957" target="45151031" id="10277062" weight="0.25" type="route">
+        <attvalues>
+          <attvalue for="3" value="400" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="28-31" />
+          <attvalue for="7" value="bicycle" />
+          <attvalue for="8" value="2021-04" />
+        </attvalues>
+      </edge>
+      <edge source="45150008" target="45151031" id="1163378" weight="0.041666666666666664" type="route">
+        <attvalues>
+          <attvalue for="3" value="2400" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="26-31" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="45150008" target="1387908186" id="1163379" weight="0.10416666666666667" type="route">
+        <attvalues>
+          <attvalue for="3" value="960" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="25-26" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="45150008" target="1387908303" id="1163846" weight="0.04807692307692308" type="route">
+        <attvalues>
+          <attvalue for="3" value="2080" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="24-26" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="45151031" target="6128456230" id="1126543" weight="0.11363636363636363" type="route">
+        <attvalues>
+          <attvalue for="3" value="880" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="29-31" />
+          <attvalue for="7" value="bicycle" />
+          <attvalue for="8" value="2021-04" />
+        </attvalues>
+      </edge>
+      <edge source="45162118" target="333273408" id="1060653" weight="0.022321428571428572" type="route">
+        <attvalues>
+          <attvalue for="3" value="4480" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="22-23" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="45162118" target="1701657172" id="1060658" weight="0.026595744680851064" type="route">
+        <attvalues>
+          <attvalue for="3" value="3760" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="3-23" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="45162118" target="1387908303" id="1163863" weight="0.028409090909090908" type="route">
+        <attvalues>
+          <attvalue for="3" value="3520" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="23-24" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="45167013" target="4823170646" id="1126540" weight="0.09615384615384616" type="route">
+        <attvalues>
+          <attvalue for="3" value="1040" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="29-30" />
+          <attvalue for="7" value="bicycle" />
+          <attvalue for="8" value="2021-04" />
+        </attvalues>
+      </edge>
+      <edge source="45168112" target="45232638" id="1163587" weight="0.02358490566037736" type="route">
+        <attvalues>
+          <attvalue for="3" value="4240" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="29-37" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="45232638" target="1545004532" id="1059282" weight="0.033783783783783786" type="route">
+        <attvalues>
+          <attvalue for="3" value="2960" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="36-37" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="45232638" target="1387908303" id="1163871" weight="0.033783783783783786" type="route">
+        <attvalues>
+          <attvalue for="3" value="2960" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="24-37" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="45288021" target="5782151141" id="1016191" weight="0.05434782608695652" type="route">
+        <attvalues>
+          <attvalue for="3" value="1840" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="35-36" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="45288021" target="361214563" id="1016193" weight="0.17857142857142858" type="route">
+        <attvalues>
+          <attvalue for="3" value="560" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="36-39" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="333273408" target="1387908185" id="1060657" weight="0.052083333333333336" type="route">
+        <attvalues>
+          <attvalue for="3" value="1920" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="22-25" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="333273408" target="1377049969" id="1060759" weight="0.06578947368421052" type="route">
+        <attvalues>
+          <attvalue for="3" value="1520" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="21-22" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="361214563" target="1387908303" id="1059272" weight="0.016666666666666666" type="route">
+        <attvalues>
+          <attvalue for="3" value="6000" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="24-39" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="486901473" target="1431427422" id="6856229" weight="0.06578947368421052" type="route">
+        <attvalues>
+          <attvalue for="3" value="1520" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="23-25" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="1370329539" target="1375266259" id="1687673" weight="0.026041666666666668" type="route">
+        <attvalues>
+          <attvalue for="3" value="3840" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="5-7" />
+          <attvalue for="7" value="bicycle" />
+          <attvalue for="8" value="2021-03" />
+        </attvalues>
+      </edge>
+      <edge source="1370329565" target="1379329814" id="1060365" weight="0.06578947368421052" type="route">
+        <attvalues>
+          <attvalue for="3" value="1520" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="5-27" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="1375266259" target="1376230172" id="1688685" weight="0.052083333333333336" type="route">
+        <attvalues>
+          <attvalue for="3" value="1920" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="2-7" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="1376230172" target="1377049969" id="1060662" weight="0.03048780487804878" type="route">
+        <attvalues>
+          <attvalue for="3" value="3280" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="2-21" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="1376230381" target="1701657172" id="1060654" weight="0.08333333333333333" type="route">
+        <attvalues>
+          <attvalue for="3" value="1200" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="3-20" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="1376230381" target="1377049969" id="1060655" weight="0.052083333333333336" type="route">
+        <attvalues>
+          <attvalue for="3" value="1920" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="20-21" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="1379329814" target="1630593206" id="1060363" weight="0.03125" type="route">
+        <attvalues>
+          <attvalue for="3" value="3200" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="25-27" />
+          <attvalue for="7" value="bicycle" />
+        </attvalues>
+      </edge>
+      <edge source="1431454084" target="1432078726" id="1019345" weight="0.15625" type="route">
+        <attvalues>
+          <attvalue for="3" value="640" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="20-64" />
+          <attvalue for="7" value="bicycle" />
+          <attvalue for="8" value="2021-03" />
+        </attvalues>
+      </edge>
+      <edge source="1431454084" target="7511532148" id="1198802" weight="0.05434782608695652" type="route">
+        <attvalues>
+          <attvalue for="3" value="1840" />
+          <attvalue for="9" value="Route slecht aangegeven, bordjes ontbreken." />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="20-65" />
+          <attvalue for="7" value="bicycle" />
+          <attvalue for="8" value="2021-03" />
+        </attvalues>
+      </edge>
+      <edge source="1447253571" target="6580433374" id="14264385" weight="0.625" type="route">
+        <attvalues>
+          <attvalue for="3" value="160" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="38-71" />
+          <attvalue for="7" value="bicycle" />
+          <attvalue for="8" value="2023-02" />
+        </attvalues>
+      </edge>
+      <edge source="6580433374" target="7511532148" id="14264384" weight="0.10416666666666667" type="route">
+        <attvalues>
+          <attvalue for="3" value="960" />
+          <attvalue for="4" value="rcn" />
+          <attvalue for="5" value="node_network" />
+          <attvalue for="6" value="38-65" />
+          <attvalue for="7" value="bicycle" />
+          <attvalue for="8" value="2023-02" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

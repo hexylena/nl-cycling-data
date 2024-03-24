@@ -1,4 +1,20 @@
-## mar 23
+---
+title: log
+---
+
+## mar 23 - graph
+
+using the box-based shitty distance measure
+
+made some art
+
+![](./images/graph.png)
+
+after some label size changes/reweighting, ok, this looks fine actually?????
+
+![](./images/graph-ok.png)
+
+## mar 23 - dist
 
 how do we determine the length of distance between two numbers? Saskia had the brilliant idea of 'chunking' them, they shouldn't ever be too far apart, so, we can make some blocks and measure that distance.
 
@@ -25,7 +41,6 @@ but then there's shit like this, how should we detect that they're "equivalent"
 
 ![](./images/osm-1.png)
 ![](./images/osm-2.png)
-
 
 ## mar 23
 
