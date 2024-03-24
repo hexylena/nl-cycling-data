@@ -14,6 +14,7 @@ r_transformer = pyproj.Transformer.from_crs(rd, wg84)
 # convert overpass turbo into real geojson for us.
 
 print('Loading holland.turbojson.gz')
+import gzip
 with gzip.open('holland.turbojson.gz', 'r') as handle:
     data = json.load(handle)
 
@@ -44,12 +45,15 @@ for node in tqdm.tqdm(nodes['elements']):
         'refs': set(),
         'j': [],
     }
-    G.add_node(node['id'], num=node['tags']['rcn_ref'], lon=node['lon'], lat=node['lat'])
+    G.add_node(node['id'], num=node['tags']['rcn_ref']) #, lon=node['lon'], lat=node['lat'])
 
 def chunk(x, y, size=CHUNK_DIST):
     # Round both x and y to chunks of 50
     # e.g. (0, 0) -> (0, 0), 25, 25 -> (0, 0), 50, 50 -> (50, 50)
     return (int(x/size)*size, int(y/size)*size)
+
+import collections
+c = collections.Counter()
 
 # Second time through deep search through the ways to find any overlaps.
 for e in tqdm.tqdm(data['elements']):
@@ -110,31 +114,27 @@ for e in tqdm.tqdm(data['elements']):
         matching_nodes = list(set(matching_nodes))
         differently_numbered_nodes = set([refs[m]['num'] for m in matching_nodes])
         if len(differently_numbered_nodes) == 0:
-            pass
+            c['no_nodes'] += 1
             # print("Route without nodes")
         elif len(differently_numbered_nodes) == 1:
-            pass
-            # print("Route deadends")
+            c['single_node'] += 1
         elif len(differently_numbered_nodes) == 2:
-            if e['id'] == "1163378":
-                print(distance)
-            qzz = copy.copy(e['tags'])
-            if 'distance' in qzz:
-                del qzz['distance']
+            c['two_nodes'] += 1
+            # if e['id'] == "1163378":
+            #     print(distance)
 
             G.add_edge(
-                refs[matching_nodes[0]]['id'], 
+                refs[matching_nodes[0]]['id'],
                 refs[matching_nodes[1]]['id'],
                 id=e['id'],
-                distance=distance,
-                weight=100 / distance,
-                **qzz
+                weight=distance,
+                ref=e['tags'].get('ref', ''),
             )
             # print([refs[m] for m in matching_nodes])
         else:
-            pass
-            # print("Route with multiple nodes how do i handle this")
+            c['multiple_nodes'] += 1
 
+print(c)
 # import pprint
 # pprint.pprint(refs)
 
@@ -164,7 +164,8 @@ for e in tqdm.tqdm(data['elements']):
 print("Saving graph: holland.gexf")
 nx.write_gexf(G, 'holland.gexf')
 
-print("Saving rd_boxes.geojson")
-with open('rd_boxes.geojson', 'w') as handle:
-    handle.write("const rd_boxes = ")
-    json.dump(rd_boxes, handle)
+# Probably not necessary
+# print("Saving rd_boxes.geojson")
+# with open('rd_boxes.geojson', 'w') as handle:
+#     handle.write("const rd_boxes = ")
+#     json.dump(rd_boxes, handle)
