@@ -3,7 +3,7 @@ import networkx
 import geopy.distance
 import pyproj
 
-CHUNK_DIST = 40
+CHUNK_DIST = 80
 wg84 = pyproj.CRS("WGS84")
 rd = pyproj.CRS("EPSG:28992")
 transformer = pyproj.Transformer.from_crs(wg84, rd)
@@ -51,6 +51,7 @@ for e in data['elements']:
         # Start of a node
         matching_nodes = []
         all_nodes = []
+        # TODO: generate subdivisions of lat/lon pairs with long distances between them.
         for node in e['members']:
             for geo in node.get('geometry', []):
                 rd_coords = transformer.transform(geo['lat'], geo['lon'])
@@ -81,7 +82,6 @@ for e in data['elements']:
             x1 = r_transformer.transform(n[0]+CHUNK_DIST, n[1])
             x2 = r_transformer.transform(n[0], n[1]+CHUNK_DIST)
             x3 = r_transformer.transform(n[0]+CHUNK_DIST, n[1]+CHUNK_DIST)
-            print(x0, x1, x2, x3)
 
             rd_boxes.append({
                 "type": "Feature",

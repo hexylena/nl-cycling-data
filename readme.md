@@ -6,6 +6,21 @@ https://geoforum.nl/t/projection-system/8264/15
 
 maybe this is actually a functional use for RD coordinates?
 
+ok initial naive box drawing algorithm which, while it has nice properties, also has a looot of issues.
+
+![](./images/a.png)
+![](./images/b.png)
+
+clearly suffers from some line segments having lat/lon far apart, we'd need to
+generate segments between them, and also line segments unluckily running close
+together.
+
+going to try saskia's actual idea of just checking the start/end of line segments and merging where possible.
+
+- if the start/end are sufficiently (>50? m) apart
+- AND two line segments have sufficiently close start/end
+- then drop one.
+
 
 ## mar 23
 
