@@ -4,6 +4,13 @@ import json
 import tqdm
 import gzip
 
+# centimeters
+PRECISION = 6
+# half a meter or so
+PRECISION = 5
+# A couple meters
+PRECISION = 4
+
 print('Loading holland.turbojson')
 with gzip.open('holland.turbojson.gz', 'r') as handle:
     data = json.load(handle)
@@ -27,12 +34,20 @@ for e in tqdm.tqdm(data['elements']):
                 "geometry": {
                     "type": "MultiLineString",
                     "coordinates": [
-                        [[z['lon'], z['lat']] for z in q.get('geometry', [])]
+                        [
+                            [
+                                round(z['lon'], PRECISION), 
+                                round(z['lat'], PRECISION)
+                            ] 
+                            for z in q.get('geometry', [])
+                        ]
                         for q in
                         e['members']
                     ]
                 },
-                "properties": e['tags']
+                "properties": {
+                    "ref": e['tags'].get('ref', ''),
+                }
             })
 
 for node in tqdm.tqdm(nodes['elements']):
@@ -43,28 +58,30 @@ for node in tqdm.tqdm(nodes['elements']):
         "geometry": {
             "type": "Point",
             "coordinates": [
-                node['lon'],
-                node['lat'],
+                round(node['lon'], PRECISION),
+                round(node['lat'], PRECISION)
             ]
         },
-        "properties": node['tags']
+        "properties": {
+            "rcn_ref": node['tags'].get('rcn_ref', '')
+        }
     })
 
 print("Saving ways")
 with open('geojson.way.js', 'w') as handle:
     handle.write("const gw = ")
-    json.dump(w, handle)
+    json.dump(w, handle, separators=(',', ':'))
 
 with open('geojson.way.geojson', 'w') as handle:
-    json.dump(w, handle)
+    json.dump(w, handle, separators=(',', ':'))
 
 print("Saving nodes")
 with open('geojson.node.js', 'w') as handle:
     handle.write("const gn = ")
-    json.dump(n, handle)
+    json.dump(n, handle, separators=(',', ':'))
 
 with open('geojson.node.geojson', 'w') as handle:
-    json.dump(n, handle)
+    json.dump(n, handle, separators=(',', ':'))
 
 # import pprint
 # pprint.pprint(refs)
