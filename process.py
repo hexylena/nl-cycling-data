@@ -4,12 +4,12 @@ import json
 import tqdm
 import gzip
 
-print('Loading holland.geojson')
-with gzip.open('holland.geojson.gz', 'r') as handle:
+print('Loading holland.turbojson')
+with gzip.open('holland.turbojson.gz', 'r') as handle:
     data = json.load(handle)
 
-print('Loading holland.nodes.geojson')
-with open('holland.nodes.geojson', 'r') as handle:
+print('Loading holland.nodes.turbojson')
+with open('holland.nodes.turbojson', 'r') as handle:
     nodes = json.load(handle)
 
 n = []
@@ -55,9 +55,15 @@ with open('geojson.way.js', 'w') as handle:
     handle.write("const gw = ")
     json.dump(w, handle)
 
+with open('geojson.way.geojson', 'w') as handle:
+    json.dump(w, handle)
+
 print("Saving nodes")
 with open('geojson.node.js', 'w') as handle:
     handle.write("const gn = ")
+    json.dump(n, handle)
+
+with open('geojson.node.geojson', 'w') as handle:
     json.dump(n, handle)
 
 # import pprint

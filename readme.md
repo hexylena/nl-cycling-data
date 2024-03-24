@@ -8,13 +8,11 @@ you can fetch data:
 
 ```bash
 bash fetch.sh
-# fetches dh.geojson, dh.nodes.geojson
-# fetches holland.geojson, holland.nodes.geojson
+# fetches dh.turbojson, dh.nodes.turbojson
+# fetches holland.turbojson, holland.nodes.turbojson
 ```
 
 the Hague data is a good representative test case of all the weirdness in the data.
-
-it's not actually geojson, that's a lie. it's the overpass turbo json format which can be converted.
 
 ```bash
 python process.py # converts to geojson.{way,node}.js for rendering

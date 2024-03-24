@@ -1,2 +1,2 @@
-holland.geojson: fetch.sh
+holland.turbojson.gz: fetch.sh
 	bash fetch.sh

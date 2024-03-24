@@ -13,12 +13,12 @@ r_transformer = pyproj.Transformer.from_crs(rd, wg84)
 
 # convert overpass turbo into real geojson for us.
 
-print('Loading holland.geojson.gz')
-with gzip.open('holland.geojson.gz', 'r') as handle:
+print('Loading holland.turbojson.gz')
+with gzip.open('holland.turbojson.gz', 'r') as handle:
     data = json.load(handle)
 
-print('Loading holland.nodes.geojson')
-with open('holland.nodes.geojson', 'r') as handle:
+print('Loading holland.nodes.turbojson')
+with open('holland.nodes.turbojson', 'r') as handle:
     nodes = json.load(handle)
 
 def swap(x, y):
