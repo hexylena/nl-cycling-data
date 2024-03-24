@@ -25,7 +25,7 @@ for node in nodes['elements']:
             'refs': set(),
             'j': [],
         }
-        G.add_node(node['id'], **{'num': node['tags']['rcn_ref']})
+        G.add_node(node['id'], num=node['tags']['rcn_ref'], lon=node['lon'], lat=node['lat'])
 
 # Second time through deep search through the ways to find any overlaps.
 for e in data['elements']:
@@ -54,6 +54,7 @@ for e in data['elements']:
             G.add_edge(
                 refs[matching_nodes[0]]['id'], 
                 refs[matching_nodes[1]]['id'],
+                id=e['id'],
                 **e['tags']
             )
             print([refs[m] for m in matching_nodes])
@@ -68,4 +69,4 @@ for e in data['elements']:
 # networkx.draw(G, with_labels=True)
 # plt.show()
 
-print(G.write_gexf('holland.gexf'))
+print(networkx.write_gexf(G, 'holland.gexf'))
