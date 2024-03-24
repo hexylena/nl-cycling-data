@@ -63,7 +63,9 @@ for e in data['elements']:
 # import pprint
 # pprint.pprint(refs)
 
-print(G)
-import matplotlib.pyplot as plt
-networkx.draw(G, with_labels=True)
-plt.show()
+# print(G)
+# import matplotlib.pyplot as plt
+# networkx.draw(G, with_labels=True)
+# plt.show()
+
+print(G.write_gexf('holland.gexf'))
