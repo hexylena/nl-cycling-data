@@ -1,6 +1,35 @@
 ---
 title: log
 ---
+
+## TODO
+
+- use the graph for routing.
+- show it on the website
+- print view (business card size)
+
+there's something wrong with the 25s in the graph, namely that they're not all connected.
+
+```
+<node id="3651033264" label="3651033264">
+  <attvalues>
+    <attvalue for="0" value="25" />
+  </attvalues>
+</node>
+<node id="1387908186" label="1387908186">
+  <attvalues>
+    <attvalue for="0" value="25" />
+  </attvalues>
+</node>
+<edge source="45150008" target="1387908186" id="1163379" weight="960">
+  <attvalues>
+    <attvalue for="1" value="25-26" />
+  </attvalues>
+</edge>
+```
+
+
+
 ## mar 23 - gh
 
 experiments in shrinking geojson files.
