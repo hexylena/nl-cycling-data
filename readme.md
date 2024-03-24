@@ -1,3 +1,11 @@
+## mar 23
+
+how do we determine the length of distance between two numbers? Saskia had the brilliant idea of 'chunking' them, they shouldn't ever be too far apart, so, we can make some blocks and measure that distance.
+
+https://geoforum.nl/t/projection-system/8264/15
+
+maybe this is actually a functional use for RD coordinates?
+
 
 ## mar 23
 
@@ -74,4 +82,3 @@ out geom;
 ```
 
 the RCN node data just isn't there, except for the ways.
-

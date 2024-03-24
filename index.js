@@ -20,3 +20,5 @@ const coorsLayer = L.geoJSON(gj, {
 	},
 	onEachFeature
 }).addTo(map);
+
+const rdLayer = L.geoJSON(rd_boxes).addTo(map);
