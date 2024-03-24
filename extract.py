@@ -1,5 +1,5 @@
 import json
-import networkx
+import networkx as nx
 import geopy.distance
 import pyproj
 
@@ -27,7 +27,7 @@ refs = {
 
 rd_boxes = []
 
-G = networkx.Graph()
+G = nx.Graph()
 
 # First time through the data collect our nodes.
 for node in nodes['elements']:
@@ -113,6 +113,7 @@ for e in data['elements']:
                 refs[matching_nodes[1]]['id'],
                 id=e['id'],
                 distance=distance,
+                weight=100 / distance,
                 **e['tags']
             )
             # print([refs[m] for m in matching_nodes])
@@ -123,12 +124,29 @@ for e in data['elements']:
 # import pprint
 # pprint.pprint(refs)
 
-# print(G)
-# import matplotlib.pyplot as plt
-# networkx.draw(G, with_labels=True)
-# plt.show()
+# Remove isolates
+G.remove_nodes_from(list(nx.isolates(G)))
 
-networkx.write_gexf(G, 'holland.gexf')
+pos = nx.spring_layout(G, seed=7)  # positions for all nodes - seed for reproducibility
+import matplotlib.pyplot as plt
+
+# nodes
+nx.draw_networkx_nodes(G, pos, node_size=50)
+
+# edges
+nx.draw_networkx_edges(G, pos, width=2)
+
+# node labels
+nx.draw_networkx_labels(G, pos, font_size=5, font_family="sans-serif", labels={k: v['num'] for k, v in G.nodes(data=True)})
+# edge weight labels
+edge_labels = nx.get_edge_attributes(G, "distance")
+nx.draw_networkx_edge_labels(G, pos, edge_labels, font_size=5, font_family="sans-serif")
+
+plt.axis("off")
+plt.tight_layout()
+plt.savefig("graph.png", dpi=300)
+
+nx.write_gexf(G, 'holland.gexf')
 
 with open('rd_boxes.geojson', 'w') as handle:
     handle.write("const rd_boxes = ")

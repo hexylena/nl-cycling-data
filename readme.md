@@ -21,6 +21,11 @@ going to try saskia's actual idea of just checking the start/end of line segment
 - AND two line segments have sufficiently close start/end
 - then drop one.
 
+but then there's shit like this, how should we detect that they're "equivalent"
+
+![](./images/osm-1.png)
+![](./images/osm-2.png)
+
 
 ## mar 23
 

@@ -1,8 +1,10 @@
-	const map = L.map('map').setView([52.05, 4.3], 12);
-	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		maxZoom: 19,
-		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-	}).addTo(map);
+const map = L.map('map').setView([52.05, 4.3], 12);
+const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+const rdLayer = L.geoJSON(rd_boxes).addTo(map);
 
 function onEachFeature(feature, layer) {
 	let popupContent = `<p>I started out as a GeoJSON ${feature.geometry.type}, but now I'm a Leaflet vector!</p>`;
@@ -20,5 +22,3 @@ const coorsLayer = L.geoJSON(gj, {
 	},
 	onEachFeature
 }).addTo(map);
-
-const rdLayer = L.geoJSON(rd_boxes).addTo(map);
