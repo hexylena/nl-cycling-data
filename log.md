@@ -1,6 +1,15 @@
 ---
 title: log
 ---
+## mar 23 - gh
+
+experiments in shrinking geojson files.
+
+cutting precision will take 40MB to 32, removing spaces gets it to 30.
+
+```
+sed -r 's/([0-9]+).([0-9]{4})[0-9]+/\1.\2/g'
+```
 
 ## mar 23 - graph
 
